@@ -35,7 +35,9 @@
   height: 50px;
   margin: 10px;
   border-radius: 50%;
+  background-color: transparent;
   position: relative;
+  z-index: 2;
 }
 
 .ballScore {
@@ -46,6 +48,7 @@
   font-size: 1rem;
   font-weight: bold;
   user-select: none;
+  z-index: 1;
 }
 
 @keyframes animate {
