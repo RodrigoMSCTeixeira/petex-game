@@ -15,13 +15,17 @@ function Board() {
   const [otherBall, setOtherBall] = useState(null)
 
   useEffect(() => {
-    setInterval(function () {
-      const crushBall = controls.getCrushBall
-      const generateBall = controls.getGenerateBall
-      const slideBall = controls.getSlideBall
-    }, 100)
+    // setInterval(function () {
+    //   const crushBall = controls.getCrushBall
+    //   const slideBall = controls.getSlideBall
+    //   const generateBall = controls.getGenerateBall
+    // }, 100)
 
-  }, [])
+    const crushBall = controls.getCrushBall
+    const slideBall = controls.getSlideBall
+    const generateBall = controls.getGenerateBall
+
+  }, [currentBall])
 
   function dragStart(e) {
     setCurrentBall(e.target.id)
@@ -51,8 +55,6 @@ function Board() {
     const ohterCoords = otherBall.split('-')
     const otherBallRow = Number(ohterCoords[0])
     const otherBallColumn = Number(ohterCoords[1])
-
-    console.log(currentCoords, ohterCoords)
 
     const moveLeft = otherBallColumn === currentBallColumn - 1 && currentBallRow === otherBallRow
     const moveRight = otherBallColumn === currentBallColumn + 1 && currentBallRow === otherBallRow

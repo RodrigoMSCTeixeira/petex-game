@@ -26,11 +26,15 @@ class ControlService {
         const ball2 = this.#balls[i][j + 1]
         const ball3 = this.#balls[i][j + 2]
 
+        console.log(ball3)
+
         if (
-          ball1.ball_color === ball2.ball_color &&
-          ball2.ball_color === ball3.ball_color &&
+          ball1.ball_color == ball2.ball_color &&
+          ball2.ball_color == ball3.ball_color &&
           !ball1.ball_color.includes('white')) {
-          ball1.ball_color = ball2.ball_color = ball3.ball_color = 'white'
+          ball1.ball_color = 'white'
+          ball2.ball_color = 'white'
+          ball3.ball_color = 'white'
         }
       }
     }
@@ -41,11 +45,16 @@ class ControlService {
         const ball2 = this.#balls[j + 1][i]
         const ball3 = this.#balls[j + 2][i]
 
+
+
+
         if (
-          ball1.ball_color === ball2.ball_color &&
-          ball2.ball_color === ball3.ball_color &&
+          ball1.ball_color == ball2.ball_color &&
+          ball2.ball_color == ball3.ball_color &&
           !ball1.ball_color.includes('white')) {
-          ball1.ball_color = ball2.ball_color = ball3.ball_color = 'white'
+          ball1.ball_color = 'white'
+          ball2.ball_color = 'white'
+          ball3.ball_color = 'white'
         }
       }
     }
